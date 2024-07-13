@@ -1,0 +1,12 @@
+
+   TAK(React)- Osadzenie całego zadania w jakimś JSowym frameworku (najlepiej Angular).
+    TAK- Brak plików graficznych w końcowym projekcie (brak plików typu jpg, gif, png, svg).
+    TAK - CSS IS AWESOME w footerze - po najechaniu myszką ramka (bez tekstu) powinna wykonać animowany obrót.
+     TAK - Zastosowanie BEM.
+     TAK- Spełnianie zasad a11y.
+     TAK- Logiczne wykorzystanie jednostek rem, em, vh, vw (w efekcie jak najmniejsze użycie jednostki px) - w taki sposób by w efekcie responsywność spełniona została jak najmniejszą ilością kodu.
+     TAK- Mobile first.
+     TAK- Doklejając treść sprawić by w ostatnim bloku treści były posortowane alfabetycznie.
+     TAK-Przy doklejaniu treści w przypadku niemożliwości spełnienia warunku by była unikalna wyświetlić stosowny komunikat (np. alert/dialog/modal).
+    NIE-Button w footerze ("pokaż") wysuwający ramkę bez użycia JSa.
+     TAK - Rezultat prac wrzucić do podglądu na jakąś darmową platformę (np. netlify/heroku).

@@ -1,0 +1,259 @@
+
+$bg-color: #2c2c2c;
+$text-color: #ffffff;
+$header-bg: #1c1c1c;
+$button-bg: #f0ad4e;
+$secondary-button-bg: #5bc0de;
+$button-text-color:#ffffff;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: $bg-color;
+  color: $text-color;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: $header-bg;
+  @include flex-center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .logo {
+    color: white; 
+    text-decoration: none; 
+    font-size: 3rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 4rem; 
+    height: 4rem; 
+    border-radius: 50%; 
+    background-color: transparent; 
+    margin-top: 20px;
+    margin-left: 20px; 
+    transition: background-color 0.3s ease; 
+
+    &:hover {
+      cursor: pointer;
+      background-color: #f0ad4e;
+    }
+  }
+
+  .recruitment-task{
+    margin-right: 20px;
+  }
+}
+
+main {
+  flex: 1;
+  margin-top: 100px; 
+  @include flex-center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2rem;
+    border-bottom: 1px solid white; 
+    padding-bottom: 1rem;
+  }
+
+  .content {
+    @include flex-center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px;
+
+    .block {
+      background-color: transparent;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+      flex: 1 1 30%;
+      min-width: 300px;
+    
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    
+      label {
+        display: block;
+        margin: 10px 0;
+      }
+    
+      button {
+        background-color: transparent;
+        border: 1px solid;
+        color: $text-color;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    
+        &:hover {
+          opacity: 0.8;
+          background-color: #f0ad4e;
+        }
+    
+        &.append-btn {
+          background-color: transparent;
+        }
+      }
+    }
+    
+    .second-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .button-row{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin: 1em;
+      }
+
+      h2 {
+        text-align: center;
+      }
+    
+      button {
+        width: 100%; 
+        max-width: 200px; 
+        margin: 10px 10px; 
+
+
+      }
+    }
+
+    .long-block {
+      p {
+        margin: 10px 0;
+        word-wrap: break-word; 
+        white-space: pre-wrap; 
+        &:last-child {
+          margin-bottom: 0;
+          
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333131;
+}
+
+.square-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #f0ad4e;
+    z-index: 1; 
+    transition: transform 2s linear; 
+  }
+
+  &:hover::before {
+    transform: rotate(360deg); 
+    cursor: pointer;
+  }
+}
+
+.square p {
+  margin: 0;
+  position: relative; 
+  z-index: 2; 
+}
+
+.footer-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 1rem;
+}
+
+.show-hide-btn{
+  background-color: transparent;
+  border: 2px solid;
+  color: $text-color;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: .5px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  
+  
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.reset-btn, .name-btn{
+  color: black;
+  background-color: #fff;
+  margin: .5rem .5rem;
+  border: 0px solid;
+
+  &:hover {
+    opacity: 0.8;
+    color: #f0ad4e;
+  }
+
+}
